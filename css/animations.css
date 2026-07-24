@@ -1,0 +1,381 @@
+/* ==========================================
+   MAZHAR WOODWORKS
+   ANIMATIONS
+========================================== */
+
+/* Fade Up */
+
+.fade-up{
+    animation:fadeUp .8s ease forwards;
+}
+
+@keyframes fadeUp{
+
+    from{
+
+        opacity:0;
+        transform:translateY(50px);
+
+    }
+
+    to{
+
+        opacity:1;
+        transform:translateY(0);
+
+    }
+
+}
+
+
+/* Fade Left */
+
+.fade-left{
+    animation:fadeLeft .8s ease forwards;
+}
+
+@keyframes fadeLeft{
+
+    from{
+
+        opacity:0;
+        transform:translateX(-60px);
+
+    }
+
+    to{
+
+        opacity:1;
+        transform:translateX(0);
+
+    }
+
+}
+
+
+/* Fade Right */
+
+.fade-right{
+    animation:fadeRight .8s ease forwards;
+}
+
+@keyframes fadeRight{
+
+    from{
+
+        opacity:0;
+        transform:translateX(60px);
+
+    }
+
+    to{
+
+        opacity:1;
+        transform:translateX(0);
+
+    }
+
+}
+
+
+/* Zoom */
+
+.zoom-in{
+    animation:zoomIn .8s ease forwards;
+}
+
+@keyframes zoomIn{
+
+    from{
+
+        opacity:0;
+        transform:scale(.8);
+
+    }
+
+    to{
+
+        opacity:1;
+        transform:scale(1);
+
+    }
+
+}
+
+
+/* Slide Up */
+
+.slide-up{
+    animation:slideUp .7s ease forwards;
+}
+
+@keyframes slideUp{
+
+    from{
+
+        opacity:0;
+        transform:translateY(80px);
+
+    }
+
+    to{
+
+        opacity:1;
+        transform:translateY(0);
+
+    }
+
+}
+
+
+/* Hero Animation */
+
+.hero{
+
+    opacity:0;
+    transition:1s;
+
+}
+
+.hero.hero-visible{
+
+    opacity:1;
+
+}
+
+
+/* Floating */
+
+.float{
+
+    animation:floating 4s ease-in-out infinite;
+
+}
+
+@keyframes floating{
+
+    0%{
+
+        transform:translateY(0);
+
+    }
+
+    50%{
+
+        transform:translateY(-15px);
+
+    }
+
+    100%{
+
+        transform:translateY(0);
+
+    }
+
+}
+
+
+/* Pulse */
+
+.pulse{
+
+    animation:pulse 2s infinite;
+
+}
+
+@keyframes pulse{
+
+    0%{
+
+        transform:scale(1);
+
+    }
+
+    50%{
+
+        transform:scale(1.08);
+
+    }
+
+    100%{
+
+        transform:scale(1);
+
+    }
+
+}
+
+
+/* Bounce */
+
+.bounce{
+
+    animation:bounce 1.5s infinite;
+
+}
+
+@keyframes bounce{
+
+    0%,20%,50%,80%,100%{
+
+        transform:translateY(0);
+
+    }
+
+    40%{
+
+        transform:translateY(-15px);
+
+    }
+
+    60%{
+
+        transform:translateY(-8px);
+
+    }
+
+}
+
+
+/* Ripple Effect */
+
+.btn{
+
+    position:relative;
+    overflow:hidden;
+
+}
+
+.ripple{
+
+    position:absolute;
+
+    width:15px;
+    height:15px;
+
+    border-radius:50%;
+
+    background:rgba(255,255,255,.5);
+
+    transform:scale(0);
+
+    animation:ripple .6s linear;
+
+    pointer-events:none;
+
+}
+
+@keyframes ripple{
+
+    to{
+
+        transform:scale(30);
+
+        opacity:0;
+
+    }
+
+}
+
+
+/* Image Hover */
+
+.project-card img,
+.service-card img{
+
+    transition:.6s;
+
+}
+
+.project-card:hover img,
+.service-card:hover img{
+
+    transform:scale(1.08);
+
+}
+
+
+/* Rotate Icon */
+
+.service-content i{
+
+    transition:.4s;
+
+}
+
+.service-card:hover i{
+
+    transform:rotate(360deg);
+
+}
+
+
+/* Underline */
+
+.nav-links a{
+
+    position:relative;
+
+}
+
+.nav-links a::after{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+    bottom:-8px;
+
+    width:0;
+
+    height:2px;
+
+    background:#c89d62;
+
+    transition:.4s;
+
+}
+
+.nav-links a:hover::after,
+.nav-links a.active::after{
+
+    width:100%;
+
+}
+
+
+/* Card Hover */
+
+.stat-card,
+.process-card,
+.testimonial-card{
+
+    transition:.4s;
+
+}
+
+.stat-card:hover,
+.process-card:hover,
+.testimonial-card:hover{
+
+    transform:translateY(-12px);
+
+}
+
+
+/* Smooth */
+
+html{
+
+    scroll-behavior:smooth;
+
+}
+
+*{
+
+    transition:background .3s,
+               color .3s,
+               border .3s;
+
+}
